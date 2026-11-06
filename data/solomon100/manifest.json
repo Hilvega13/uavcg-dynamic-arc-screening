@@ -1,0 +1,244 @@
+[
+  {
+    "name": "C101",
+    "file": "data\\solomon100\\C101.txt",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "C102",
+    "file": "data\\solomon100\\C102.txt",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "C103",
+    "file": "data\\solomon100\\C103.txt",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "C105",
+    "file": "data\\solomon100\\C105.txt",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "C201",
+    "file": "data\\solomon100\\C201.txt",
+    "bytes": 7522,
+    "cached": true,
+    "customers": 100,
+    "capacity": 700.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "C204",
+    "file": "data\\solomon100\\C204.txt",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 700.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "C207",
+    "file": "data\\solomon100\\C207.txt",
+    "bytes": 7524,
+    "cached": true,
+    "customers": 100,
+    "capacity": 700.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "C208",
+    "file": "data\\solomon100\\C208.txt",
+    "bytes": 7524,
+    "cached": true,
+    "customers": 100,
+    "capacity": 700.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "R102",
+    "file": "data\\solomon100\\R102.txt",
+    "bytes": 7523,
+    "sha1": "d549aa6546bc",
+    "url": "https://raw.githubusercontent.com/ML4VRP/ML4VRP2023/main/Instances/text/Customer100/R102.txt",
+    "customers": 100,
+    "capacity": 200.0,
+    "max_vehicles": 25,
+    "horizon": 230.0,
+    "parsed": true
+  },
+  {
+    "name": "R105",
+    "file": "data\\solomon100\\R105.txt",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "R107",
+    "file": "data\\solomon100\\R107.txt",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "R108",
+    "file": "data\\solomon100\\R108.txt",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "R202",
+    "file": "data\\solomon100\\R202.txt",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "R203",
+    "file": "data\\solomon100\\R203.txt",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "R207",
+    "file": "data\\solomon100\\R207.txt",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "R211",
+    "file": "data\\solomon100\\R211.txt",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "RC101",
+    "file": "data\\solomon100\\RC101.txt",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "RC104",
+    "file": "data\\solomon100\\RC104.txt",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "RC107",
+    "file": "data\\solomon100\\RC107.txt",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "RC108",
+    "file": "data\\solomon100\\RC108.txt",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "RC201",
+    "file": "data\\solomon100\\RC201.txt",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "RC203",
+    "file": "data\\solomon100\\RC203.txt",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "RC204",
+    "file": "data\\solomon100\\RC204.txt",
+    "bytes": 7524,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "max_vehicles": 25,
+    "parsed": true
+  },
+  {
+    "name": "RC205",
+    "file": "data\\solomon100\\RC205.txt",
+    "bytes": 7524,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "max_vehicles": 25,
+    "parsed": true
+  }
+]

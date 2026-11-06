@@ -1,0 +1,126 @@
+[
+ {
+  "instance": "R201-n50-tw0.5",
+  "rho": 0.5,
+  "col_cap": 0,
+  "col_score": "learned",
+  "col_cap_mode": "fixed",
+  "refresh": 0,
+  "lp": 851.5050989446972,
+  "iterations": 46,
+  "optimal_lp": true,
+  "status": "CERTIFIED",
+  "wall": 80.94,
+  "pp_s": 6.284,
+  "rmp_s": 71.456,
+  "other_s": 3.202,
+  "t_feat_s": 0.003,
+  "t_pred_s": 0.01,
+  "t_inner_s": 6.267,
+  "t_call_s": 6.283,
+  "labels": 1879629,
+  "lp_ref": null,
+  "lp_ok": null,
+  "train_info": {
+   "train_mode": "loo",
+   "train_blocks": 413,
+   "train_seed": 0,
+   "train_size_arg": 0,
+   "train_family": "R",
+   "loo_blocks": 413,
+   "train_per_instance": {
+    "C101": 36,
+    "C102": 61,
+    "C105": 40,
+    "R102": 7,
+    "R105": 6,
+    "R107": 10,
+    "R108": 9,
+    "RC101": 7,
+    "RC104": 70,
+    "RC107": 53,
+    "RC108": 79,
+    "RC201": 35
+   },
+   "train_per_family": {
+    "C": 3,
+    "R": 4,
+    "RC": 5
+   }
+  },
+  "mean_kept": 0.19968304278922344,
+  "mean_col_admitted": 101.26086956521739,
+  "mean_col_found": 101.26086956521739,
+  "calls": 46,
+  "escalations": 1,
+  "strong_escalations": 0,
+  "warm_full": 0,
+  "features": 22,
+  "mask_lag": 0,
+  "mask_seed": 20261022,
+  "anchor_alpha": 0.75,
+  "anchor_until": 20,
+  "in_top_k": 3,
+  "mask_mode": "threshold",
+  "mask_threshold": 0.5,
+  "mask_budget": 0,
+  "rho_adaptive": false,
+  "strong_eps": -0.01,
+  "protect_last": 40,
+  "rf": {
+   "n_estimators": 200,
+   "max_depth": 5,
+   "min_samples_leaf": 50
+  },
+  "loo_excluded": [
+   "R201-n50-tw0.5"
+  ],
+  "true_dual_calls": 26,
+  "last_dual_source": "primal-marginals",
+  "last_full_calls": [
+   {
+    "columns": 2,
+    "min_rc": -1.4038949438613884,
+    "relaxed_min_rc": -1.4038949438613884,
+    "truncated": false,
+    "priced_on_true_duals": true
+   },
+   {
+    "columns": 34,
+    "min_rc": -0.9845156429140083,
+    "relaxed_min_rc": -0.9845156429140083,
+    "truncated": false,
+    "priced_on_true_duals": true
+   },
+   {
+    "columns": 139,
+    "min_rc": -2.2400810229794885,
+    "relaxed_min_rc": -2.2400810229794885,
+    "truncated": false,
+    "priced_on_true_duals": true
+   },
+   {
+    "columns": 77,
+    "min_rc": -0.5683678064536224,
+    "relaxed_min_rc": -0.5683678064536224,
+    "truncated": false,
+    "priced_on_true_duals": true
+   },
+   {
+    "columns": 0,
+    "min_rc": 0.0,
+    "relaxed_min_rc": -3.197442310920451e-14,
+    "truncated": false,
+    "priced_on_true_duals": true
+   }
+  ],
+  "last_snapshot": {
+   "iter": 46,
+   "lp": 851.5050989446972,
+   "added": 0,
+   "min_rc": 0.0
+  },
+  "trace_path": null,
+  "arm": "learned-mask-no-cap-ctl"
+ }
+]

@@ -1,0 +1,195 @@
+{
+  "version": "n50_v1",
+  "frozen": "2026-10-23",
+  "spec_ref": "User instruction, 2026-10-23: the main size moves from n=60 to n=50 (n=60 stopped; n=100 is the next target).",
+  "description": "n=50 migration tier (first freeze): the same 12 instances as n60_cat2_v1; tw_scale inherits the frozen n=60 values (not re-probed at n=50; probe fields are 0 until the first budget probe fills them in).",
+  "protocol": {
+    "n": 50,
+    "ng_k": 10,
+    "pricer": "ngroute",
+    "label_cap": 3000000,
+    "load_order": "truncate(n) -> narrow_time_windows(tw_scale)",
+    "loader": "uavcg.bench.load_instance(name, n=50, tw_scale=<entry.tw_scale>)",
+    "distances": "unrounded Euclidean"
+  },
+  "split_rule": {
+    "statement": "Inherit instance roster and tw_scale from n60_cat2_v1; n=50 replaces n=60.",
+    "why": "Comparability: the same instance set means n=50 vs n=60 is a size comparison, not an instance change.",
+    "side_effect_documented": "tw_scale was probed at n=60; at n=50 the same factor is strictly easier, so first-pass runs may sit below the n=60 tier difficulty.",
+    "probe_source": "none yet (probe fields zeroed, pending first n=50 calibration)",
+    "tw_scale_source": "inherited from data/splits/n60_cat2_v1.json"
+  },
+  "families": {
+    "C2": {
+      "train": 2,
+      "test": 3,
+      "n_candidates_probed": 5,
+      "solomon_family_size": 8
+    },
+    "RC2": {
+      "train": 2,
+      "test": 2,
+      "n_candidates_probed": 4,
+      "solomon_family_size": 8
+    },
+    "R2": {
+      "train": 1,
+      "test": 2,
+      "n_candidates_probed": 3,
+      "solomon_family_size": 11
+    }
+  },
+  "bucket_probe_seconds_mean": {
+    "C2": {
+      "train": 0.0,
+      "test": 0.0
+    },
+    "RC2": {
+      "train": 0.0,
+      "test": 0.0
+    },
+    "R2": {
+      "train": 0.0,
+      "test": 0.0
+    }
+  },
+  "landing_instances": [
+    "C201",
+    "RC201",
+    "R201"
+  ],
+  "instances": [
+    {
+      "name": "C201",
+      "family": "C2",
+      "bucket": "test",
+      "n": 50,
+      "tw_scale": 0.8,
+      "probe_seconds": 0.0,
+      "probe_labels": 0,
+      "probe_cap_frac": 0.0,
+      "clean": true
+    },
+    {
+      "name": "C205",
+      "family": "C2",
+      "bucket": "test",
+      "n": 50,
+      "tw_scale": 0.8,
+      "probe_seconds": 0.0,
+      "probe_labels": 0,
+      "probe_cap_frac": 0.0,
+      "clean": true
+    },
+    {
+      "name": "C208",
+      "family": "C2",
+      "bucket": "test",
+      "n": 50,
+      "tw_scale": 0.8,
+      "probe_seconds": 0.0,
+      "probe_labels": 0,
+      "probe_cap_frac": 0.0,
+      "clean": true
+    },
+    {
+      "name": "C206",
+      "family": "C2",
+      "bucket": "train",
+      "n": 50,
+      "tw_scale": 0.8,
+      "probe_seconds": 0.0,
+      "probe_labels": 0,
+      "probe_cap_frac": 0.0,
+      "clean": true
+    },
+    {
+      "name": "C207",
+      "family": "C2",
+      "bucket": "train",
+      "n": 50,
+      "tw_scale": 0.35,
+      "probe_seconds": 0.0,
+      "probe_labels": 0,
+      "probe_cap_frac": 0.0,
+      "clean": true
+    },
+    {
+      "name": "RC201",
+      "family": "RC2",
+      "bucket": "test",
+      "n": 50,
+      "tw_scale": 0.8,
+      "probe_seconds": 0.0,
+      "probe_labels": 0,
+      "probe_cap_frac": 0.0,
+      "clean": true
+    },
+    {
+      "name": "RC205",
+      "family": "RC2",
+      "bucket": "test",
+      "n": 50,
+      "tw_scale": 0.5,
+      "probe_seconds": 0.0,
+      "probe_labels": 0,
+      "probe_cap_frac": 0.0,
+      "clean": true
+    },
+    {
+      "name": "RC206",
+      "family": "RC2",
+      "bucket": "train",
+      "n": 50,
+      "tw_scale": 0.5,
+      "probe_seconds": 0.0,
+      "probe_labels": 0,
+      "probe_cap_frac": 0.0,
+      "clean": true
+    },
+    {
+      "name": "RC207",
+      "family": "RC2",
+      "bucket": "train",
+      "n": 50,
+      "tw_scale": 0.35,
+      "probe_seconds": 0.0,
+      "probe_labels": 0,
+      "probe_cap_frac": 0.0,
+      "clean": true
+    },
+    {
+      "name": "R201",
+      "family": "R2",
+      "bucket": "test",
+      "n": 50,
+      "tw_scale": 0.5,
+      "probe_seconds": 0.0,
+      "probe_labels": 0,
+      "probe_cap_frac": 0.0,
+      "clean": true
+    },
+    {
+      "name": "R209",
+      "family": "R2",
+      "bucket": "test",
+      "n": 50,
+      "tw_scale": 0.35,
+      "probe_seconds": 0.0,
+      "probe_labels": 0,
+      "probe_cap_frac": 0.0,
+      "clean": true
+    },
+    {
+      "name": "R205",
+      "family": "R2",
+      "bucket": "train",
+      "n": 50,
+      "tw_scale": 0.35,
+      "probe_seconds": 0.0,
+      "probe_labels": 0,
+      "probe_cap_frac": 0.0,
+      "clean": true
+    }
+  ]
+}

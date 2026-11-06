@@ -1,0 +1,126 @@
+[
+ {
+  "instance": "R201-n50-tw0.5",
+  "rho": 0.5,
+  "col_cap": 0,
+  "col_score": "learned",
+  "col_cap_mode": "fixed",
+  "refresh": 1,
+  "lp": 851.505098944697,
+  "iterations": 40,
+  "optimal_lp": true,
+  "status": "CERTIFIED",
+  "wall": 66.13,
+  "pp_s": 4.852,
+  "rmp_s": 58.587,
+  "other_s": 2.689,
+  "t_feat_s": 0.032,
+  "t_pred_s": 0.385,
+  "t_inner_s": 4.413,
+  "t_call_s": 4.851,
+  "labels": 1327859,
+  "lp_ref": null,
+  "lp_ok": null,
+  "train_info": {
+   "train_mode": "loo",
+   "train_blocks": 413,
+   "train_seed": 0,
+   "train_size_arg": 0,
+   "train_family": "R",
+   "loo_blocks": 413,
+   "train_per_instance": {
+    "C101": 36,
+    "C102": 61,
+    "C105": 40,
+    "R102": 7,
+    "R105": 6,
+    "R107": 10,
+    "R108": 9,
+    "RC101": 7,
+    "RC104": 70,
+    "RC107": 53,
+    "RC108": 79,
+    "RC201": 35
+   },
+   "train_per_family": {
+    "C": 3,
+    "R": 4,
+    "RC": 5
+   }
+  },
+  "mean_kept": 0.20073296354992073,
+  "mean_col_admitted": 100.92682926829268,
+  "mean_col_found": 100.92682926829268,
+  "calls": 41,
+  "escalations": 4,
+  "strong_escalations": 0,
+  "warm_full": 0,
+  "features": 22,
+  "mask_lag": 0,
+  "mask_seed": 20261022,
+  "anchor_alpha": 0.5,
+  "anchor_until": 20,
+  "in_top_k": 3,
+  "mask_mode": "threshold",
+  "mask_threshold": 0.5,
+  "mask_budget": 0,
+  "rho_adaptive": false,
+  "strong_eps": -0.01,
+  "protect_last": 40,
+  "rf": {
+   "n_estimators": 200,
+   "max_depth": 5,
+   "min_samples_leaf": 50
+  },
+  "loo_excluded": [
+   "R201-n50-tw0.5"
+  ],
+  "true_dual_calls": 22,
+  "last_dual_source": "primal-marginals",
+  "last_full_calls": [
+   {
+    "columns": 200,
+    "min_rc": -28.427337774533477,
+    "relaxed_min_rc": -28.427337774533477,
+    "truncated": false,
+    "priced_on_true_duals": true
+   },
+   {
+    "columns": 138,
+    "min_rc": -4.455270065286658,
+    "relaxed_min_rc": -4.455270065286658,
+    "truncated": false,
+    "priced_on_true_duals": true
+   },
+   {
+    "columns": 87,
+    "min_rc": -2.551961298529566,
+    "relaxed_min_rc": -2.551961298529566,
+    "truncated": false,
+    "priced_on_true_duals": true
+   },
+   {
+    "columns": 24,
+    "min_rc": -2.867976478107053,
+    "relaxed_min_rc": -2.867976478107053,
+    "truncated": false,
+    "priced_on_true_duals": true
+   },
+   {
+    "columns": 0,
+    "min_rc": 0.0,
+    "relaxed_min_rc": -3.907985046680551e-14,
+    "truncated": false,
+    "priced_on_true_duals": true
+   }
+  ],
+  "last_snapshot": {
+   "iter": 40,
+   "lp": 851.505098944697,
+   "added": 0,
+   "min_rc": 0.0
+  },
+  "trace_path": "results\\v11_configB\\trace\\STA\\R201-n50-tw0.5_learned-mask-no-cap-ctl_f22_r1_a0.5.npz",
+  "arm": "learned-mask-no-cap-ctl"
+ }
+]

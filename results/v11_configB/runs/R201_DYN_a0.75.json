@@ -1,0 +1,98 @@
+[
+ {
+  "instance": "R201-n50-tw0.5",
+  "rho": 0.5,
+  "col_cap": 0,
+  "col_score": "learned",
+  "col_cap_mode": "fixed",
+  "refresh": 1,
+  "lp": 851.505098944697,
+  "iterations": 30,
+  "optimal_lp": true,
+  "status": "CERTIFIED",
+  "wall": 70.7,
+  "pp_s": 7.87,
+  "rmp_s": 58.528,
+  "other_s": 4.306,
+  "t_feat_s": 0.025,
+  "t_pred_s": 0.289,
+  "t_inner_s": 7.539,
+  "t_call_s": 7.869,
+  "labels": 1110520,
+  "lp_ref": null,
+  "lp_ok": null,
+  "train_info": {
+   "train_mode": "loo",
+   "train_blocks": 413,
+   "train_seed": 0,
+   "train_size_arg": 0,
+   "train_family": "R",
+   "loo_blocks": 413,
+   "train_per_instance": {
+    "C101": 36,
+    "C102": 61,
+    "C105": 40,
+    "R102": 7,
+    "R105": 6,
+    "R107": 10,
+    "R108": 9,
+    "RC101": 7,
+    "RC104": 70,
+    "RC107": 53,
+    "RC108": 79,
+    "RC201": 35
+   },
+   "train_per_family": {
+    "C": 3,
+    "R": 4,
+    "RC": 5
+   }
+  },
+  "mean_kept": 0.24109878499735862,
+  "mean_col_admitted": 171.0,
+  "mean_col_found": 171.0,
+  "calls": 30,
+  "escalations": 1,
+  "strong_escalations": 0,
+  "warm_full": 0,
+  "features": 34,
+  "mask_lag": 0,
+  "mask_seed": 20261022,
+  "anchor_alpha": 0.75,
+  "anchor_until": 20,
+  "in_top_k": 3,
+  "mask_mode": "threshold",
+  "mask_threshold": 0.5,
+  "mask_budget": 0,
+  "rho_adaptive": false,
+  "strong_eps": -0.01,
+  "protect_last": 40,
+  "rf": {
+   "n_estimators": 200,
+   "max_depth": 5,
+   "min_samples_leaf": 50
+  },
+  "loo_excluded": [
+   "R201-n50-tw0.5"
+  ],
+  "true_dual_calls": 10,
+  "last_dual_source": "primal-marginals",
+  "last_full_calls": [
+   {
+    "columns": 0,
+    "min_rc": 0.0,
+    "relaxed_min_rc": -5.3290705182007514e-14,
+    "truncated": false,
+    "priced_on_true_duals": true
+   }
+  ],
+  "last_snapshot": {
+   "iter": 30,
+   "lp": 851.505098944697,
+   "added": 0,
+   "min_rc": 0.0
+  },
+  "trace_path": null,
+  "arm": "learned-mask-no-cap-ctl"
+ }
+]

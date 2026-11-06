@@ -1,0 +1,47 @@
+{
+  "version": "n60_cat2_v1",
+  "frozen": "2026-10-04",
+  "spec_ref": "DynML-S v3.3 §7.5 step 3 / §3.3 / §7.3",
+  "description": "n=60 Solomon category-2 main tier, 12 instances. Sole training/evaluation matrix for the DynML-S project (n=100 main tier abandoned, n=150 deleted).",
+  "protocol": {
+    "n": 60,
+    "ng_k": 10,
+    "pricer": "ngroute",
+    "label_cap": 3000000,
+    "load_order": "truncate(n) -> narrow_time_windows(tw_scale)",
+    "loader": "uavcg.bench.load_instance(name, n=60, tw_scale=<entry.tw_scale>)",
+    "distances": "unrounded Euclidean (R-9: exact distances for the main experiment; the §8 red-line anchor uses with_rounded_distances)"
+  },
+  "split_rule": {
+    "statement": "Within each family, sort by the measured single-call probe time ascending, then deal the instances alternately into the two buckets with the TEST bucket picking first (ranks 0,2,4... -> test; 1,3... -> train).",
+    "why": "Bucket sizes then come out exactly as the approved matrix requires (C2 train2/test3, RC2 train2/test2, R2 train1/test2), and dealing alternately makes both buckets span the difficulty range instead of giving one bucket all the cheap instances.",
+    "side_effect_documented": "All three step-5 landing representatives (C201/RC201/R201) fall in the test bucket. That is a consequence of the rule, not a hand-placed exception: each is the cheapest instance of its family, so it is rank 0.",
+    "probe_source": "results/_probe_matrix.jsonl",
+    "tw_scale_source": "the loosest factor at which one full-network pricing call landed under the 20s envelope (spec §3.3); the floor is x0.35"
+  },
+  "families": {
+    "C2": {"train": 2, "test": 3, "n_candidates_probed": 5, "solomon_family_size": 8},
+    "RC2": {"train": 2, "test": 2, "n_candidates_probed": 4, "solomon_family_size": 8},
+    "R2": {"train": 1, "test": 2, "n_candidates_probed": 3, "solomon_family_size": 11}
+  },
+  "bucket_probe_seconds_mean": {
+    "C2": {"train": 7.92, "test": 6.807},
+    "RC2": {"train": 4.375, "test": 2.925},
+    "R2": {"train": 4.29, "test": 4.915}
+  },
+  "landing_instances": ["C201", "RC201", "R201"],
+  "instances": [
+    {"name": "C201",  "family": "C2",  "bucket": "test",  "n": 60, "tw_scale": 0.8,  "probe_seconds": 0.69,  "probe_labels": 164242,  "probe_cap_frac": 0.055, "clean": true},
+    {"name": "C205",  "family": "C2",  "bucket": "test",  "n": 60, "tw_scale": 0.8,  "probe_seconds": 6.02,  "probe_labels": 505308,  "probe_cap_frac": 0.168, "clean": true},
+    {"name": "C208",  "family": "C2",  "bucket": "test",  "n": 60, "tw_scale": 0.8,  "probe_seconds": 13.71, "probe_labels": 1238777, "probe_cap_frac": 0.413, "clean": true},
+    {"name": "C206",  "family": "C2",  "bucket": "train", "n": 60, "tw_scale": 0.8,  "probe_seconds": 13.42, "probe_labels": 924388,  "probe_cap_frac": 0.308, "clean": true},
+    {"name": "C207",  "family": "C2",  "bucket": "train", "n": 60, "tw_scale": 0.35, "probe_seconds": 2.42,  "probe_labels": 298596,  "probe_cap_frac": 0.100, "clean": true},
+    {"name": "RC201", "family": "RC2", "bucket": "test",  "n": 60, "tw_scale": 0.8,  "probe_seconds": 0.54,  "probe_labels": 148939,  "probe_cap_frac": 0.050, "clean": true},
+    {"name": "RC205", "family": "RC2", "bucket": "test",  "n": 60, "tw_scale": 0.5,  "probe_seconds": 5.31,  "probe_labels": 472421,  "probe_cap_frac": 0.157, "clean": true},
+    {"name": "RC206", "family": "RC2", "bucket": "train", "n": 60, "tw_scale": 0.5,  "probe_seconds": 7.63,  "probe_labels": 709749,  "probe_cap_frac": 0.237, "clean": true},
+    {"name": "RC207", "family": "RC2", "bucket": "train", "n": 60, "tw_scale": 0.35, "probe_seconds": 1.12,  "probe_labels": 296320,  "probe_cap_frac": 0.099, "clean": true},
+    {"name": "R201",  "family": "R2",  "bucket": "test",  "n": 60, "tw_scale": 0.5,  "probe_seconds": 0.71,  "probe_labels": 195203,  "probe_cap_frac": 0.065, "clean": true},
+    {"name": "R209",  "family": "R2",  "bucket": "test",  "n": 60, "tw_scale": 0.35, "probe_seconds": 9.12,  "probe_labels": 1060282, "probe_cap_frac": 0.353, "clean": true},
+    {"name": "R205",  "family": "R2",  "bucket": "train", "n": 60, "tw_scale": 0.35, "probe_seconds": 4.29,  "probe_labels": 475641,  "probe_cap_frac": 0.159, "clean": true}
+  ]
+}

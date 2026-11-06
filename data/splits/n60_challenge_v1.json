@@ -1,0 +1,85 @@
+{
+  "version": "n60_challenge_v1",
+  "frozen": "2026-10-06",
+  "spec_ref": "DynML-S v3.6 §7.5 step 3 -- dual-tier ruling 2026-10-05 (requirement 4)",
+  "tier": "challenge",
+  "description": "n=60 CHALLENGE tier (v3.6). Entries are pre-decided by the PI rather than re-screened from x0.8: R201@x0.4 and RC201@x0.5 enter directly. Target band 3-6 instances. Runs THREE arms only, not four -- the n=60 tier exists to show the pipeline still moves at scale, not to carry the main comparison.",
+  "protocol": {
+    "n": 60,
+    "ng_k": 10,
+    "pricer": "ngroute",
+    "label_cap": 3000000,
+    "load_order": "truncate(n) -> narrow_time_windows(tw_scale)",
+    "loader": "uavcg.bench.load_instance(name, n=60, tw_scale=<entry.tw_scale>)",
+    "distances": "unrounded Euclidean (R-9)",
+    "arms": 3,
+    "admissibility": {
+      "criterion": "CERTIFIED within the work gate, under the v3.6 capped protocol (descent cut at 300,000 LABELS per call with a 120 s non-binding ceiling; certification attempts bounded only by the hard total of 2400+1200=3600 s, at most 3 per run)",
+      "label_gate": 100000000,
+      "label_gate_basis": "TOTAL labels created in the attempt, including the certification laps",
+      "why_labels": "see n40_cat2_v1: the wall clock drifts 1.68x on bit-identical output",
+      "provisional": "may be adjusted once against the first re-screen batch, with the change recorded in docs/step5-blocker-diagnosis_*.md (the file name carries the latest report timestamp)"
+    },
+    "truncation_protocol": {
+      "descent_labels": 300000,
+      "descent_seconds_ceiling": 120.0,
+      "cert_labels": 1000000000,
+      "max_cert_laps": 3,
+      "hard_total_seconds": 3600.0,
+      "why": "see n40_cat2_v1.protocol.truncation_protocol; the same four defects P1-P4 and the same fixes apply here unchanged"
+    },
+    "wall_fuse_seconds": 7200
+  },
+  "tw_scale_ladder": [
+    0.5,
+    0.4,
+    0.35
+  ],
+  "split_rule": {
+    "statement": "Not a split: these entries are directly designated by the PI. Bucket assignment is inherited from n60_cat2_v1 (both are test-bucket instances there as well, each being the cheapest of its family).",
+    "why": "The challenge tier is a scale check, not a matrix; giving it its own bucket rule would imply it carries a train/test comparison it does not carry.",
+    "probe_source": "none -- the probe_* columns below are deliberately ZERO. The 20 s envelope readings are void (they were taken on a degenerate insertion dual under which ~56 of 60 customers had pi ~ 0), and no honest single-call reading exists for these (name, n, tw_scale) triples yet. They are not used for ordering here: with two entries the order is fixed by fiat."
+  },
+  "families": {
+    "RC2": {
+      "train": 0,
+      "test": 1,
+      "n_candidates_probed": 1,
+      "solomon_family_size": 8
+    },
+    "R2": {
+      "train": 0,
+      "test": 1,
+      "n_candidates_probed": 1,
+      "solomon_family_size": 11
+    }
+  },
+  "landing_instances": [
+    "R201",
+    "RC201"
+  ],
+  "instances": [
+    {
+      "name": "R201",
+      "family": "R2",
+      "bucket": "test",
+      "n": 60,
+      "tw_scale": 0.4,
+      "probe_seconds": 0.0,
+      "probe_labels": 0,
+      "probe_cap_frac": 0.0,
+      "clean": true
+    },
+    {
+      "name": "RC201",
+      "family": "RC2",
+      "bucket": "test",
+      "n": 60,
+      "tw_scale": 0.5,
+      "probe_seconds": 0.0,
+      "probe_labels": 0,
+      "probe_cap_frac": 0.0,
+      "clean": true
+    }
+  ]
+}

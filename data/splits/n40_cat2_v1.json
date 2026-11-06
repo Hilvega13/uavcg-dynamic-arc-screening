@@ -1,0 +1,207 @@
+{
+  "version": "n40_cat2_v1",
+  "frozen": "2026-10-06",
+  "spec_ref": "DynML-S v3.6 §7.5 step 3 / §3.3 / §7.3 -- dual-tier ruling 2026-10-05 (requirement 4)",
+  "tier": "main",
+  "description": "n=40 Solomon category-2 MAIN tier (v3.6): same 12 instances, same families and same train/test buckets as n60_cat2_v1, truncated to n=40. The main tier moved from n=60 to n=40 so that a 12-instance content+admissible matrix is reachable inside the hard 3600 s budget; n=60 becomes the challenge tier.",
+  "status": "candidate -- the tw_scale column below is the STARTING rung for the v3.6 re-screen, not a measured result. It is written back only after the re-screen reports admissible rows.",
+  "protocol": {
+    "n": 40,
+    "ng_k": 10,
+    "pricer": "ngroute",
+    "label_cap": 3000000,
+    "load_order": "truncate(n) -> narrow_time_windows(tw_scale)",
+    "loader": "uavcg.bench.load_instance(name, n=40, tw_scale=<entry.tw_scale>)",
+    "distances": "unrounded Euclidean (R-9: exact distances for the main experiment; the §8 red-line anchor uses with_rounded_distances)",
+    "admissibility": {
+      "criterion": "CERTIFIED within the work gate, under the v3.6 capped protocol (descent cut at 300,000 LABELS per call with a 120 s non-binding ceiling; certification attempts bounded only by the hard total of 2400+1200=3600 s, at most 3 per run)",
+      "label_gate": 20000000,
+      "label_gate_basis": "TOTAL labels created in the attempt, including the certification laps",
+      "why_labels": "the wall clock on this machine drifts 1.68x on bit-identical output (935.61 s vs 1573.73 s for 108 iterations and LP_min 397.1891082438668), so admissibility is decided on reproducible work units",
+      "provisional": "the gate value may be adjusted once against the first re-screen batch, with the change recorded in docs/step5-blocker-diagnosis_*.md (the file name carries the latest report timestamp).  `filter_instance_content.py --report --label-gate <X>` re-adjudicates the same JSONL under a new value, so an adjustment costs no re-running"
+    },
+    "truncation_protocol": {
+      "descent_labels": 300000,
+      "descent_seconds_ceiling": 120.0,
+      "cert_labels": 1000000000,
+      "max_cert_laps": 3,
+      "descent_budget_seconds": 2400.0,
+      "cert_budget_seconds": 1200.0,
+      "hard_total_seconds": 3600.0,
+      "why": "v3.6 ②/③ as executed and then corrected in §15 of the blocking diagnosis.  The descent handle is a LABEL cap because a time cap decides how much work happens and therefore destroys determinism.  A certification attempt is granted the WHOLE remaining hard total and a label ceiling that cannot bind, because a complete full-network call needs >1200 s and ~1e7-2.5e7 labels on these instances -- bounding it by either the nominal 1200 s or NgRoutePricer's own 3e6 default made certification unreachable (defects P2/P4).  The work gate closes the DESCENT phase only: a certification attempt is not extra search, it is the measurement (defect P3)."
+    },
+    "wall_fuse_seconds": 7200
+  },
+  "tw_scale_ladder": [
+    0.8,
+    0.6,
+    0.5
+  ],
+  "split_rule": {
+    "statement": "INHERITED unchanged from n60_cat2_v1: within each family, sort by the measured single-call probe time ascending, then deal alternately into the two buckets with the TEST bucket picking first (ranks 0,2,4... -> test; 1,3... -> train).",
+    "why": "Keeping the assignment identical is what makes an n=40 row comparable to the n=60 row for the same name; re-dealing at n=40 would confound the tier change with a bucket change.",
+    "side_effect_documented": "All three step-5 landing representatives (C201/RC201/R201) fall in the test bucket. That is a consequence of the rule, not a hand-placed exception: each is the cheapest instance of its family, so it is rank 0.",
+    "probe_source": "results/_probe_matrix.jsonl, measured at n=60",
+    "tw_scale_source": "v3.6 requirement 4: start at x0.8, narrow per rung, floor x0.5. RESET to 0.8 here; the n=60 factors are void both because the instance changed and because they were calibrated under blind pricing."
+  },
+  "families": {
+    "C2": {
+      "train": 2,
+      "test": 3,
+      "n_candidates_probed": 5,
+      "solomon_family_size": 8
+    },
+    "RC2": {
+      "train": 2,
+      "test": 2,
+      "n_candidates_probed": 4,
+      "solomon_family_size": 8
+    },
+    "R2": {
+      "train": 1,
+      "test": 2,
+      "n_candidates_probed": 3,
+      "solomon_family_size": 11
+    }
+  },
+  "probe_seconds_VOID": "The probe_seconds / probe_labels / probe_cap_frac columns are the n=60 readings carried over UNCHANGED. They are VOID as cost predictions for n=40 and are used for one thing only: ordering the sweep cheapest-first, on the argument already recorded in the filter -- a blind-pricing reading is a lower bound on the honest cost, so it orders without pretending to predict. Nothing in the admissibility verdict reads them.",
+  "landing_instances": [
+    "C201",
+    "RC201",
+    "R201"
+  ],
+  "instances": [
+    {
+      "name": "C201",
+      "family": "C2",
+      "bucket": "test",
+      "n": 40,
+      "tw_scale": 0.8,
+      "probe_seconds": 0.69,
+      "probe_labels": 164242,
+      "probe_cap_frac": 0.055,
+      "clean": true
+    },
+    {
+      "name": "C205",
+      "family": "C2",
+      "bucket": "test",
+      "n": 40,
+      "tw_scale": 0.8,
+      "probe_seconds": 6.02,
+      "probe_labels": 505308,
+      "probe_cap_frac": 0.168,
+      "clean": true
+    },
+    {
+      "name": "C208",
+      "family": "C2",
+      "bucket": "test",
+      "n": 40,
+      "tw_scale": 0.8,
+      "probe_seconds": 13.71,
+      "probe_labels": 1238777,
+      "probe_cap_frac": 0.413,
+      "clean": true
+    },
+    {
+      "name": "C206",
+      "family": "C2",
+      "bucket": "train",
+      "n": 40,
+      "tw_scale": 0.8,
+      "probe_seconds": 13.42,
+      "probe_labels": 924388,
+      "probe_cap_frac": 0.308,
+      "clean": true
+    },
+    {
+      "name": "C207",
+      "family": "C2",
+      "bucket": "train",
+      "n": 40,
+      "tw_scale": 0.8,
+      "probe_seconds": 2.42,
+      "probe_labels": 298596,
+      "probe_cap_frac": 0.1,
+      "clean": true
+    },
+    {
+      "name": "RC201",
+      "family": "RC2",
+      "bucket": "test",
+      "n": 40,
+      "tw_scale": 0.8,
+      "probe_seconds": 0.54,
+      "probe_labels": 148939,
+      "probe_cap_frac": 0.05,
+      "clean": true
+    },
+    {
+      "name": "RC205",
+      "family": "RC2",
+      "bucket": "test",
+      "n": 40,
+      "tw_scale": 0.8,
+      "probe_seconds": 5.31,
+      "probe_labels": 472421,
+      "probe_cap_frac": 0.157,
+      "clean": true
+    },
+    {
+      "name": "RC206",
+      "family": "RC2",
+      "bucket": "train",
+      "n": 40,
+      "tw_scale": 0.8,
+      "probe_seconds": 7.63,
+      "probe_labels": 709749,
+      "probe_cap_frac": 0.237,
+      "clean": true
+    },
+    {
+      "name": "RC207",
+      "family": "RC2",
+      "bucket": "train",
+      "n": 40,
+      "tw_scale": 0.8,
+      "probe_seconds": 1.12,
+      "probe_labels": 296320,
+      "probe_cap_frac": 0.099,
+      "clean": true
+    },
+    {
+      "name": "R201",
+      "family": "R2",
+      "bucket": "test",
+      "n": 40,
+      "tw_scale": 0.8,
+      "probe_seconds": 0.71,
+      "probe_labels": 195203,
+      "probe_cap_frac": 0.065,
+      "clean": true
+    },
+    {
+      "name": "R209",
+      "family": "R2",
+      "bucket": "test",
+      "n": 40,
+      "tw_scale": 0.8,
+      "probe_seconds": 9.12,
+      "probe_labels": 1060282,
+      "probe_cap_frac": 0.353,
+      "clean": true
+    },
+    {
+      "name": "R205",
+      "family": "R2",
+      "bucket": "train",
+      "n": 40,
+      "tw_scale": 0.8,
+      "probe_seconds": 4.29,
+      "probe_labels": 475641,
+      "probe_cap_frac": 0.159,
+      "clean": true
+    }
+  ]
+}

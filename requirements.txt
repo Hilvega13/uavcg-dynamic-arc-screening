@@ -1,0 +1,4 @@
+# Core solver dependencies; these three are all that selftest, CG and the arm experiments need.
+numpy>=2.0,<3
+scipy>=1.11
+scikit-learn>=1.3

@@ -1,0 +1,453 @@
+[
+  {
+    "name": "C101",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 1236.0
+  },
+  {
+    "name": "C102",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 1236.0
+  },
+  {
+    "name": "C103",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 1236.0
+  },
+  {
+    "name": "C104",
+    "bytes": 7523,
+    "sha1": "af54eab48a77",
+    "url": "https://raw.githubusercontent.com/felipelagos/mahh/main/instances/solomon/c104.txt",
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 1236.0
+  },
+  {
+    "name": "C105",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 1236.0
+  },
+  {
+    "name": "C106",
+    "bytes": 7520,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 1236.0
+  },
+  {
+    "name": "C107",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 1236.0
+  },
+  {
+    "name": "C108",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 1236.0
+  },
+  {
+    "name": "C109",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 1236.0
+  },
+  {
+    "name": "R101",
+    "bytes": 7321,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 230.0
+  },
+  {
+    "name": "R102",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 230.0
+  },
+  {
+    "name": "R103",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 230.0
+  },
+  {
+    "name": "R104",
+    "bytes": 7523,
+    "sha1": "93161e3aad5e",
+    "url": "https://raw.githubusercontent.com/felipelagos/mahh/main/instances/solomon/r104.txt",
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 230.0
+  },
+  {
+    "name": "R105",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 230.0
+  },
+  {
+    "name": "R106",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 230.0
+  },
+  {
+    "name": "R107",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 230.0
+  },
+  {
+    "name": "R108",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 230.0
+  },
+  {
+    "name": "R109",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 230.0
+  },
+  {
+    "name": "R110",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 230.0
+  },
+  {
+    "name": "R111",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 230.0
+  },
+  {
+    "name": "R112",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 230.0
+  },
+  {
+    "name": "RC101",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 240.0
+  },
+  {
+    "name": "RC102",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 240.0
+  },
+  {
+    "name": "RC103",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 240.0
+  },
+  {
+    "name": "RC104",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 240.0
+  },
+  {
+    "name": "RC105",
+    "bytes": 7525,
+    "sha1": "4194d0d2324d",
+    "url": "https://raw.githubusercontent.com/felipelagos/mahh/main/instances/solomon/rc105.txt",
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 240.0
+  },
+  {
+    "name": "RC106",
+    "bytes": 7524,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 240.0
+  },
+  {
+    "name": "RC107",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 240.0
+  },
+  {
+    "name": "RC108",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 200.0,
+    "horizon": 240.0
+  },
+  {
+    "name": "C201",
+    "bytes": 7522,
+    "cached": true,
+    "customers": 100,
+    "capacity": 700.0,
+    "horizon": 3390.0
+  },
+  {
+    "name": "C202",
+    "bytes": 7524,
+    "cached": true,
+    "customers": 100,
+    "capacity": 700.0,
+    "horizon": 3390.0
+  },
+  {
+    "name": "C203",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 700.0,
+    "horizon": 3390.0
+  },
+  {
+    "name": "C204",
+    "bytes": 7523,
+    "cached": true,
+    "customers": 100,
+    "capacity": 700.0,
+    "horizon": 3390.0
+  },
+  {
+    "name": "C205",
+    "bytes": 7524,
+    "cached": true,
+    "customers": 100,
+    "capacity": 700.0,
+    "horizon": 3390.0
+  },
+  {
+    "name": "C206",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 700.0,
+    "horizon": 3390.0
+  },
+  {
+    "name": "C207",
+    "bytes": 7524,
+    "cached": true,
+    "customers": 100,
+    "capacity": 700.0,
+    "horizon": 3390.0
+  },
+  {
+    "name": "C208",
+    "bytes": 7524,
+    "cached": true,
+    "customers": 100,
+    "capacity": 700.0,
+    "horizon": 3390.0
+  },
+  {
+    "name": "R201",
+    "bytes": 7524,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "horizon": 1000.0
+  },
+  {
+    "name": "R202",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "horizon": 1000.0
+  },
+  {
+    "name": "R203",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "horizon": 1000.0
+  },
+  {
+    "name": "R204",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "horizon": 1000.0
+  },
+  {
+    "name": "R205",
+    "bytes": 7524,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "horizon": 1000.0
+  },
+  {
+    "name": "R206",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "horizon": 1000.0
+  },
+  {
+    "name": "R207",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "horizon": 1000.0
+  },
+  {
+    "name": "R208",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "horizon": 1000.0
+  },
+  {
+    "name": "R209",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "horizon": 1000.0
+  },
+  {
+    "name": "R210",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "horizon": 1000.0
+  },
+  {
+    "name": "R211",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "horizon": 1000.0
+  },
+  {
+    "name": "RC201",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "horizon": 960.0
+  },
+  {
+    "name": "RC202",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "horizon": 960.0
+  },
+  {
+    "name": "RC203",
+    "bytes": 7525,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "horizon": 960.0
+  },
+  {
+    "name": "RC204",
+    "bytes": 7524,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "horizon": 960.0
+  },
+  {
+    "name": "RC205",
+    "bytes": 7524,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "horizon": 960.0
+  },
+  {
+    "name": "RC206",
+    "bytes": 7524,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "horizon": 960.0
+  },
+  {
+    "name": "RC207",
+    "bytes": 7524,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "horizon": 960.0
+  },
+  {
+    "name": "RC208",
+    "bytes": 7524,
+    "cached": true,
+    "customers": 100,
+    "capacity": 1000.0,
+    "horizon": 960.0
+  }
+]

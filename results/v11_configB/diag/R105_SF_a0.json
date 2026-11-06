@@ -1,0 +1,118 @@
+[
+ {
+  "instance": "R105-n25",
+  "rho": 0.5,
+  "col_cap": 0,
+  "col_score": "learned",
+  "col_cap_mode": "fixed",
+  "refresh": 0,
+  "lp": 531.5386420627178,
+  "iterations": 8,
+  "optimal_lp": true,
+  "status": "CERTIFIED",
+  "wall": 0.2,
+  "pp_s": 0.027,
+  "rmp_s": 0.151,
+  "other_s": 0.023,
+  "t_feat_s": 0.0,
+  "t_pred_s": 0.007,
+  "t_inner_s": 0.019,
+  "t_call_s": 0.026,
+  "labels": 8426,
+  "lp_ref": null,
+  "lp_ok": null,
+  "train_info": {
+   "train_mode": "loo",
+   "train_blocks": 407,
+   "train_seed": 0,
+   "train_size_arg": 0,
+   "train_family": "R",
+   "loo_blocks": 407,
+   "train_per_instance": {
+    "C101": 36,
+    "C102": 61,
+    "C105": 40,
+    "R102": 7,
+    "R107": 10,
+    "R108": 9,
+    "RC101": 7,
+    "RC104": 70,
+    "RC107": 53,
+    "RC108": 79,
+    "RC201": 35
+   },
+   "train_per_family": {
+    "C": 3,
+    "R": 3,
+    "RC": 5
+   }
+  },
+  "mean_kept": 0.30120481927710846,
+  "mean_col_admitted": 34.875,
+  "mean_col_found": 34.875,
+  "calls": 8,
+  "escalations": 1,
+  "strong_escalations": 0,
+  "warm_full": 0,
+  "features": 22,
+  "mask_lag": 0,
+  "mask_seed": 20261022,
+  "anchor_alpha": 0.0,
+  "anchor_until": 0,
+  "in_top_k": 3,
+  "mask_mode": "threshold",
+  "mask_threshold": 0.5,
+  "mask_budget": 0,
+  "rho_adaptive": false,
+  "strong_eps": -0.01,
+  "protect_last": 40,
+  "rf": {
+   "n_estimators": 200,
+   "max_depth": 5,
+   "min_samples_leaf": 50
+  },
+  "loo_excluded": [
+   "R105-n25"
+  ],
+  "true_dual_calls": 8,
+  "last_dual_source": "primal-marginals",
+  "last_full_calls": [
+   {
+    "columns": 40,
+    "min_rc": -16.099054971026124,
+    "relaxed_min_rc": -16.099054971026124,
+    "truncated": false,
+    "priced_on_true_duals": true
+   },
+   {
+    "columns": 5,
+    "min_rc": -5.79323848177593,
+    "relaxed_min_rc": -5.79323848177593,
+    "truncated": false,
+    "priced_on_true_duals": true
+   },
+   {
+    "columns": 4,
+    "min_rc": -3.4445830539391125,
+    "relaxed_min_rc": -3.4445830539391125,
+    "truncated": false,
+    "priced_on_true_duals": true
+   },
+   {
+    "columns": 0,
+    "min_rc": 0.0,
+    "relaxed_min_rc": -1.0658141036401503e-14,
+    "truncated": false,
+    "priced_on_true_duals": true
+   }
+  ],
+  "last_snapshot": {
+   "iter": 8,
+   "lp": 531.5386420627178,
+   "added": 0,
+   "min_rc": 0.0
+  },
+  "trace_path": null,
+  "arm": "learned-mask-no-cap-ctl"
+ }
+]

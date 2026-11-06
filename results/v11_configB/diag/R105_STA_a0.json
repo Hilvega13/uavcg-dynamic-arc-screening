@@ -1,0 +1,111 @@
+[
+ {
+  "instance": "R105-n25",
+  "rho": 0.5,
+  "col_cap": 0,
+  "col_score": "learned",
+  "col_cap_mode": "fixed",
+  "refresh": 1,
+  "lp": 531.5386420627178,
+  "iterations": 8,
+  "optimal_lp": true,
+  "status": "CERTIFIED",
+  "wall": 0.25,
+  "pp_s": 0.067,
+  "rmp_s": 0.159,
+  "other_s": 0.023,
+  "t_feat_s": 0.003,
+  "t_pred_s": 0.044,
+  "t_inner_s": 0.018,
+  "t_call_s": 0.067,
+  "labels": 8039,
+  "lp_ref": null,
+  "lp_ok": null,
+  "train_info": {
+   "train_mode": "loo",
+   "train_blocks": 407,
+   "train_seed": 0,
+   "train_size_arg": 0,
+   "train_family": "R",
+   "loo_blocks": 407,
+   "train_per_instance": {
+    "C101": 36,
+    "C102": 61,
+    "C105": 40,
+    "R102": 7,
+    "R107": 10,
+    "R108": 9,
+    "RC101": 7,
+    "RC104": 70,
+    "RC107": 53,
+    "RC108": 79,
+    "RC201": 35
+   },
+   "train_per_family": {
+    "C": 3,
+    "R": 3,
+    "RC": 5
+   }
+  },
+  "mean_kept": 0.3177710843373494,
+  "mean_col_admitted": 34.75,
+  "mean_col_found": 34.75,
+  "calls": 8,
+  "escalations": 3,
+  "strong_escalations": 0,
+  "warm_full": 0,
+  "features": 22,
+  "mask_lag": 0,
+  "mask_seed": 20261022,
+  "anchor_alpha": 0.0,
+  "anchor_until": 0,
+  "in_top_k": 3,
+  "mask_mode": "threshold",
+  "mask_threshold": 0.5,
+  "mask_budget": 0,
+  "rho_adaptive": false,
+  "strong_eps": -0.01,
+  "protect_last": 40,
+  "rf": {
+   "n_estimators": 200,
+   "max_depth": 5,
+   "min_samples_leaf": 50
+  },
+  "loo_excluded": [
+   "R105-n25"
+  ],
+  "true_dual_calls": 8,
+  "last_dual_source": "primal-marginals",
+  "last_full_calls": [
+   {
+    "columns": 40,
+    "min_rc": -16.099054971026124,
+    "relaxed_min_rc": -16.099054971026124,
+    "truncated": false,
+    "priced_on_true_duals": true
+   },
+   {
+    "columns": 5,
+    "min_rc": -5.79323848177593,
+    "relaxed_min_rc": -5.79323848177593,
+    "truncated": false,
+    "priced_on_true_duals": true
+   },
+   {
+    "columns": 0,
+    "min_rc": 0.0,
+    "relaxed_min_rc": -3.552713678800501e-15,
+    "truncated": false,
+    "priced_on_true_duals": true
+   }
+  ],
+  "last_snapshot": {
+   "iter": 8,
+   "lp": 531.5386420627178,
+   "added": 0,
+   "min_rc": 0.0
+  },
+  "trace_path": null,
+  "arm": "learned-mask-no-cap-ctl"
+ }
+]
